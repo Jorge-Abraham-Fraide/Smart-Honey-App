@@ -29,15 +29,81 @@ function AppNavigation() {
       <Drawer.Navigator 
       drawerContent={props => <CustomDrawer {...props} />}
       initialRouteName='Bienvenido'
+      screenOptions={{
+        drawerStyle:{backgroundColor:"#f5e1ce"},
+        drawerActiveBackgroundColor:"#e8c39e",
+        drawerActiveTintColor:"#95305a",
+        drawerLabelStyle:{fontSize:30, marginLeft:-15, fontFamily:"DongleBold"} 
+      }}
       >
         <Drawer.Screen 
         name='Bienvenido' 
         component={BienvenidoStackScreen} 
         options={{ drawerLabel: () => null, headerShown: false}} />
-        <Drawer.Screen name='Inicio' component={InicioStackScreen} options={{ title: "Inicio", headerTitleAlign:'center', headerStyle:{backgroundColor:"#CD7104",},}} />
-        <Drawer.Screen name='Cuenta' component={Cuenta} options={{ title: "Cuenta", headerTitleAlign:'center', headerStyle:{backgroundColor:"#CD7104"},}} />
-        <Drawer.Screen name='AcercaDe' component={AcercaDe} options={{ title: "Acerca de", headerTitleAlign:'center', headerStyle:{backgroundColor:"#CD7104"},}} />
-        <Drawer.Screen name='Salir' component={CerrarSesion} options={{ title: "Salir", headerTitleAlign:'center', headerStyle:{backgroundColor:"#CD7104"},}} />
+      <Drawer.Screen 
+      name='Inicio' 
+      component={InicioStackScreen} 
+      options={{ 
+        title: "Inicio", 
+        headerTitleAlign: 'center',
+        headerStyle: { backgroundColor: "#CD7104" },
+        drawerIcon: ({ focused, color, size }) => (
+        <MaterialCommunityIcons
+        name={focused ? 'home-circle' : 'home-circle'}
+        size={40}
+        color={color}
+      />
+    )
+  }} 
+/>
+        <Drawer.Screen 
+        name='Cuenta' 
+        component={Cuenta} 
+        options={{ 
+          title: "Cuenta", 
+          headerTitleAlign:'center', 
+          headerStyle:{backgroundColor:"#CD7104"},
+          drawerIcon: ({ focused, color, size }) => (
+            <MaterialCommunityIcons
+            name={focused ? 'account' : 'account'}
+            size={40}
+            color={color}
+          />
+        )
+          }} 
+          />
+        <Drawer.Screen 
+        name='AcercaDe' 
+        component={AcercaDe} 
+        options={{ 
+          title: "Acerca de", 
+          headerTitleAlign:'center', 
+          headerStyle:{backgroundColor:"#CD7104"},
+          drawerIcon: ({ focused, color, size }) => (
+            <MaterialCommunityIcons
+            name={focused ? 'information-outline' : 'information-outline'}
+            size={40}
+            color={color}
+          />
+        )
+          }} 
+          />
+        <Drawer.Screen 
+        name='Salir' 
+        component={CerrarSesion} 
+        options={{ 
+          title: "Salir", 
+          headerTitleAlign:'center', 
+          headerStyle:{backgroundColor:"#CD7104"},
+          drawerIcon: ({ focused, color, size }) => (
+            <MaterialCommunityIcons
+            name={focused ? 'logout' : 'logout'}
+            size={40}
+            color={color}
+          />
+        )
+          }} 
+          />
       </Drawer.Navigator>
     </NavigationContainer>
   )
@@ -96,3 +162,4 @@ function InicioStackScreen() {
 }
 
 export default AppNavigation;
+
