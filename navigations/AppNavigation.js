@@ -39,7 +39,7 @@ function AppNavigation() {
         <Drawer.Screen 
         name='Bienvenido' 
         component={BienvenidoStackScreen} 
-        options={{ drawerLabel: () => null, headerShown: false}} />
+        options={{ drawerLabel: () => null, headerShown: false, headerShadowVisible:false,}} />
       <Drawer.Screen 
       name='Inicio' 
       component={InicioStackScreen} 

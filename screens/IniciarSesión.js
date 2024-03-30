@@ -28,7 +28,7 @@ function IniciarSesión() {
             </View>
 
             <View style={styles.buttonContainer}>
-              <AppButton2 name="INGRESAR" fontFamily="DongleBold" color="#DF8C3F" onPress={() => navigation.navigate("Inicio")} />
+              <AppButton2 name="ENTRAR" fontFamily="DongleBold" color="#DF8C3F" onPress={() => navigation.navigate("Inicio")} />
             </View>
 
             <View style={styles.signUpContainer}>

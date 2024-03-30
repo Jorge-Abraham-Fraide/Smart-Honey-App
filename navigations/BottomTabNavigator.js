@@ -41,6 +41,7 @@ function BottomTabNavigator() {
     name='Camaras' 
     component={ChooseCameraScreen}
     options={{
+      headerShown:false,
         tabBarIcon:({size,color})=>(
             <MaterialCommunityIcons name='bee-flower' size={50} color={color} />
           ),
@@ -53,6 +54,7 @@ function BottomTabNavigator() {
     name='Galería'
     component={Galeria}
     options={{
+      headerShown:false,
         tabBarIcon:({size,color})=>(
             <MaterialCommunityIcons name='file-image' size={50} color={color} />
           ),
